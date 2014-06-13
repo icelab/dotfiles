@@ -1,0 +1,13 @@
+# Clone any GitHub repo into a predictable location. Take the repository name
+# from the clipboard, if it's available.
+
+function ghclone {
+  gh_url=${1:-`pbpaste`}
+  co_dir=${HOME}/src/github/$(echo $gh_url | sed -E 's/^.+:\/\/github.com\///; s/\//-/; s/\.git$//')
+
+  if [ -d $co_dir ]; then
+    cd $co_dir && git pull origin master
+  else
+    git clone "${gh_url}" "${co_dir}" && cd "${co_dir}"
+  fi
+}
