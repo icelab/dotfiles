@@ -57,6 +57,11 @@ if which rbenv &>/dev/null ; then
   eval "$(rbenv init - --no-rehash)"
 fi
 
+# load nodenv if available
+if which nodenv &>/dev/null ; then
+  eval "$(nodenv init -)"
+fi
+
 # load dotfiles scripts
 export PATH="$HOME/.bin:$PATH"
 
