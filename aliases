@@ -1,0 +1,5 @@
+# Unix
+alias ll='ls -la'
+
+# Include custom aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
