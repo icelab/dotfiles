@@ -1,0 +1,4 @@
+function o {
+  target=${1:-.}
+  open $target
+}
