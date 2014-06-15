@@ -28,10 +28,14 @@ colors
 export CLICOLOR=1
 
 # history settings
-setopt hist_ignore_all_dups inc_append_history
-HISTFILE=~/.zhistory
-HISTSIZE=4096
-SAVEHIST=4096
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks     # remove superfluous blanks from each command
+setopt inc_append_history     # save every command before it is executed
+setopt share_history          # retrieve the history file every time history is called upon
+setopt extended_history       # add timestamps to history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 
 # awesome cd movements from zshkit
 setopt autocd autopushd pushdminus pushdsilent pushdtohome cdablevars
