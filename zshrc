@@ -29,7 +29,6 @@ export CLICOLOR=1
 
 # History settings
 setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_REDUCE_BLANKS     # remove superfluous blanks from each command
 setopt INC_APPEND_HISTORY     # save every command before it is executed
 setopt SHARE_HISTORY          # retrieve the history file every time history is called upon
 setopt EXTENDED_HISTORY       # add timestamps to history
