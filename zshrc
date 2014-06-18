@@ -28,11 +28,11 @@ colors
 export CLICOLOR=1
 
 # history settings
-setopt hist_ignore_all_dups
-setopt hist_reduce_blanks     # remove superfluous blanks from each command
-setopt inc_append_history     # save every command before it is executed
-setopt share_history          # retrieve the history file every time history is called upon
-setopt extended_history       # add timestamps to history
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS     # remove superfluous blanks from each command
+setopt INC_APPEND_HISTORY     # save every command before it is executed
+setopt SHARE_HISTORY          # retrieve the history file every time history is called upon
+setopt EXTENDED_HISTORY       # add timestamps to history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
