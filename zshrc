@@ -1,4 +1,4 @@
-# modify the prompt to contain git branch name if applicable
+# Modify the prompt to contain git branch name if applicable
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
   if [[ -n $ref ]]; then
@@ -8,26 +8,26 @@ git_prompt_info() {
 setopt promptsubst
 export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) %# '
 
-# load our own completion functions
+# Load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 
-# completion
+# Completion
 autoload -U compinit
 compinit
 
-# load custom executable functions
+# Load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
 done
 
-# makes color constants available
+# Make color constants available
 autoload -U colors
 colors
 
-# enable colored output from ls, etc
+# Enable colored output from ls, etc
 export CLICOLOR=1
 
-# history settings
+# History settings
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS     # remove superfluous blanks from each command
 setopt INC_APPEND_HISTORY     # save every command before it is executed
@@ -37,7 +37,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# awesome cd movements from zshkit
+# Awesome cd movements from zshkit
 setopt AUTO_CD
 setopt AUTO_PUSHD
 setopt PUSHD_MINUS
@@ -50,9 +50,9 @@ DIRSTACKSIZE=5
 setopt EXTENDED_GLOB
 
 # Allow [ or ] whereever you want
-unsetopt nomatch
+unsetopt NOMATCH
 
-# handy keybindings
+# Handy keybindings
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^R" history-incremental-search-backward
@@ -61,23 +61,23 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
-# load rbenv if available
+# Load rbenv if available
 if which rbenv &>/dev/null ; then
   eval "$(rbenv init - --no-rehash)"
 fi
 
-# load nodenv if available
+# Load nodenv if available
 if which nodenv &>/dev/null ; then
   eval "$(nodenv init -)"
 fi
 
-# load dotfiles scripts
+# Load dotfiles scripts
 export PATH="$HOME/.bin:$PATH"
 
-# mkdir .git/safe in the root of repositories you trust
+# To use a local bin/ dir, mkdir .git/safe in the root of repositories you trust
 export PATH=".git/safe/../../bin:$PATH"
 
-# aliases
+# Aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # Local config
