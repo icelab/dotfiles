@@ -38,11 +38,16 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # awesome cd movements from zshkit
-setopt autocd autopushd pushdminus pushdsilent pushdtohome cdablevars
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_MINUS
+setopt PUSHD_SILENT
+setopt PUSHD_TO_HOME
+setopt CDABLE_VARS
 DIRSTACKSIZE=5
 
 # Enable extended globbing
-setopt extendedglob
+setopt EXTENDED_GLOB
 
 # Allow [ or ] whereever you want
 unsetopt nomatch
