@@ -81,6 +81,9 @@ if which rbenv &>/dev/null ; then
   eval "$(rbenv init - --no-rehash)"
 fi
 
+# Add the local nodenv installation to the path
+export PATH="$HOME/.nodenv/bin:$PATH"
+
 # Load nodenv if available
 if which nodenv &>/dev/null ; then
   eval "$(nodenv init -)"
