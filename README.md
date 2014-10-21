@@ -61,6 +61,10 @@ export VISUAL=subl
 export EDITOR=$VISUAL
 ```
 
+## Combine with your personal dotfiles
+
+The `rcrc` configuration in these dotfiles looks for a separate `~/.dotfiles-personal` direcotry. If you create this directory, fill it with dotfiles, and then run `rcup`, those personal dotfiles will be used in combination with (and in preference to) these ones. See [Tim's dotfiles](https://github.com/timriley/dotfiles) as an example.
+
 ## Credits
 
 Thanks to Thoughtbot for [their dotfiles](https://github.com/thoughtbot/dotfiles), which formed the basis for this collection, and [rcm](https://github.com/thoughtbot/rcm).
