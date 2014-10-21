@@ -76,25 +76,6 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
-# Load rbenv if available
-if which rbenv &>/dev/null ; then
-  eval "$(rbenv init - --no-rehash)"
-fi
-
-# Add the local nodenv installation to the path
-export PATH="$HOME/.nodenv/bin:$PATH"
-
-# Load nodenv if available
-if which nodenv &>/dev/null ; then
-  eval "$(nodenv init -)"
-fi
-
-# Load dotfiles scripts
-export PATH="$HOME/.bin:$PATH"
-
-# To use a local bin/ dir, mkdir .git/safe in the root of repositories you trust
-export PATH=".git/safe/../../bin:$PATH"
-
 # Aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
