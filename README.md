@@ -29,8 +29,36 @@ Install the dotfiles:
 env RCRC=~/.dotfiles-icelab/rcrc rcup
 ```
 
+## Make your own customizations
 
-rcup -d ~/.dotfiles-icelab  -x README.md -x LICENSE
+Put your customizations in dotfiles appended with `.local`:
+
+* `~/.aliases.local`
+* `~/.gitconfig.local`
+* `~/.zshrc.local`
+
+For example, your `~/.aliases.local` might look like this:
+
+```
+# Personal git shortcuts
+alias gs='git status'
+alias gd='git diff'
+```
+
+Your `~/.gitconfig.local` might look like this:
+
+```
+[user]
+  name = Tim Riley
+  email = tim@icelab.com.au
+```
+
+Your `~/.zshenv.local` might look like this:
+
+```
+# Use Sublime Text as default editor
+export VISUAL=subl
+export EDITOR=$VISUAL
 ```
 
 ## Credits
