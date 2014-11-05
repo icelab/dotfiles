@@ -1,3 +1,8 @@
+# Set the terminal title (and preserve the cwd when opening new tabs)
+precmd() {
+  title "zsh" "%m" "%55<...<%~"
+}
+
 # Modify the prompt to contain git branch name if applicable
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
