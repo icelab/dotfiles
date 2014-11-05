@@ -1,3 +1,6 @@
+# Install Homebrew cask packages in /Applications
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # Load dotfiles scripts
 export PATH="$HOME/.bin:$PATH"
 
