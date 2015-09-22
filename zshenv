@@ -14,6 +14,11 @@ if which nodenv &>/dev/null ; then
   eval "$(nodenv init -)"
 fi
 
+# Load dinghy if available
+if which dinghy &>/dev/null ; then
+  eval "$(dinghy shellinit)"
+fi
+
 # Load dotfiles scripts
 export PATH="$HOME/.bin:$PATH"
 
