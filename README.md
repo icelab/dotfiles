@@ -10,13 +10,6 @@ chsh -s $(which zsh)
 
 ## Install
 
-Install [rcm](https://github.com/thoughtbot/rcm):
-
-```sh
-brew tap thoughtbot/formulae
-brew install rcm
-```
-
 Check out the dotfiles:
 
 ```sh
@@ -26,7 +19,7 @@ git clone https://github.com/icelab/dotfiles.git ~/.dotfiles-icelab
 Install the dotfiles:
 
 ```sh
-env RCRC=~/.dotfiles-icelab/rcrc rcup
+~/.dotfiles-icelab/bin/setup
 ```
 
 ## Make your own customizations
