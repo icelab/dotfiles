@@ -24,7 +24,7 @@ Install the dotfiles:
 
 ## Make your own customizations
 
-Put your customizations in dotfiles appended with `.local`:
+Put your customizations in dotfiles ending with `.local`:
 
 * `~/.aliases.local`
 * `~/.gitconfig.local`
@@ -56,10 +56,16 @@ export EDITOR=$VISUAL
 
 ## Combine with your personal dotfiles
 
-The `rcrc` configuration in these dotfiles looks for a separate `~/.dotfiles-personal` direcotry. If you create this directory, fill it with dotfiles, and then run `rcup`, those personal dotfiles will be used in combination with (and in preference to) these ones. See [Tim's dotfiles](https://github.com/timriley/dotfiles) as an example.
+The `rcrc` configuration in these dotfiles looks for a separate
+`~/.dotfiles-personal` directory. If you create this directory, fill it with
+dotfiles, and then run `rcup`, those personal dotfiles will be used in
+combination with (and in preference to) these ones. See [Tim's
+dotfiles](https://github.com/timriley/dotfiles) as an example.
 
 ## Credits
 
-Thanks to Thoughtbot for [their dotfiles](https://github.com/thoughtbot/dotfiles), which formed the basis for this collection, and [rcm](https://github.com/thoughtbot/rcm).
+Thanks to Thoughtbot for [rcm](https://github.com/thoughtbot/rcm) and [their own
+dotfiles](https://github.com/thoughtbot/dotfiles), which formed the basis for
+this collection.
 
 These dotfiles are maintained by [Icelab](http://icelab.com.au/).
