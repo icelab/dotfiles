@@ -7,3 +7,6 @@ log/*.log
 rerun.txt
 tmp/**/*
 !tmp/cache/.keep
+.byebug_history
+.pryrc
+.overmind*.sock
