@@ -1,2 +1,3 @@
-EXCLUDES="README.md LICENSE script/setup"
-DOTFILES_DIRS="$HOME/.dotfiles-personal $HOME/.dotfiles-icelab"
+EXCLUDES="README.md LICENSE script/*"
+DOTFILES_DIRS="$HOME/.dotfiles $HOME/.dotfiles-icelab"
+UNDOTTED="Library"
