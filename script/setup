@@ -2,8 +2,10 @@
 # Install dotfiles
 set -e
 
-brew tap thoughtbot/formulae
-brew install rcm
+if ! [ -x "$(command -v rcup)" ]
+then
+  brew tap thoughtbot/formulae
+  brew install rcm
+fi
 RCRC=~/.dotfiles-icelab/rcrc rcup
-
-echo "Dotfiles installed"
+echo "Icelab dotfiles installed"
